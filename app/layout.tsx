@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Crimson_Pro } from "next/font/google";
+import { Inter, Crimson_Pro, Dancing_Script } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const crimson = Crimson_Pro({ subsets: ["latin"], variable: "--font-crimson" });
+const dancing = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing" });
 
 export const metadata: Metadata = {
     title: "Full Stack Developer | Portfolio",
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${crimson.variable} antialiased`}>
+            <body className={`${inter.variable} ${crimson.variable} ${dancing.variable} antialiased`}>
                 <Navbar />
                 {children}
                 <Footer />

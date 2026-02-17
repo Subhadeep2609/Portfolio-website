@@ -9,8 +9,37 @@ export default function Hero() {
             {/* 3D Background */}
             <Scene />
 
-            <div className="z-10 text-left w-full max-w-7xl px-8 flex flex-col justify-center h-full pointer-events-none">
-                <div className="max-w-3xl">
+            <div className="z-10 text-left w-full max-w-7xl px-4 md:px-8 flex flex-col justify-center h-full pointer-events-none">
+                <div className="max-w-4xl z-50 mix-blend-normal">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-cursive font-bold mb-6 tracking-wide leading-tight"
+                    >
+                        <motion.span
+                            style={{ WebkitTextStroke: "1px rgba(255, 255, 255, 0.5)" }}
+                            animate={{
+                                color: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff", "#ff0000"],
+                                textShadow: [
+                                    "5px 5px 0px #000000, 0 0 20px rgba(255,0,0,0.8)",
+                                    "5px 5px 0px #000000, 0 0 20px rgba(0,255,0,0.8)",
+                                    "5px 5px 0px #000000, 0 0 20px rgba(0,0,255,0.8)",
+                                    "5px 5px 0px #000000, 0 0 20px rgba(255,255,0,0.8)",
+                                    "5px 5px 0px #000000, 0 0 20px rgba(0,255,255,0.8)",
+                                    "5px 5px 0px #000000, 0 0 20px rgba(255,0,255,0.8)",
+                                    "5px 5px 0px #000000, 0 0 20px rgba(255,0,0,0.8)"
+                                ]
+                            }}
+                            transition={{
+                                duration: 12,
+                                repeat: Infinity,
+                                ease: "linear"
+                            }}
+                        >
+                            Subhadeep Saha
+                        </motion.span>
+                    </motion.h2>
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}

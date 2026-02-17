@@ -15,6 +15,7 @@ const config: Config = {
             fontFamily: {
                 sans: ['var(--font-inter)'],
                 serif: ['var(--font-crimson)'],
+                cursive: ['var(--font-dancing)', 'cursive'],
             }
         },
     },
