@@ -16,9 +16,9 @@ export default function Contact() {
         setStatus("idle");
 
         // REPLACE THESE WITH YOUR ACTUAL EMAILJS SERVICE ID, TEMPLATE ID, AND PUBLIC KEY
-        const SERVICE_ID = "YOUR_SERVICE_ID";
-        const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-        const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+        const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
+        const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
+        const PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY!;
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
             .then((result) => {
